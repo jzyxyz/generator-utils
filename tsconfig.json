@@ -5,19 +5,13 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "noImplicitAny": true,
-    "removeComments": true,
-    "module": "CommonJS",
+    "removeComments": false,
+    "module": "ES6",
     "outDir": "dist",
     "declaration": true,
     "strictNullChecks": false,
     "lib": ["es2020", "DOM"]
   },
-  "include": [
-    "src/*",
-    "config/testCases.ts",
-    "src/index.ts",
-    "routes",
-    "src/routes/routesMap.ts"
-  ],
+  "include": ["src/*"],
   "exclude": ["node_modules"]
 }

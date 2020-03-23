@@ -1,8 +1,9 @@
 {
   "name": "@jzyxyz/generator-utils",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "utility functions to make everyday with generator easier",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/jzyxyz/generator-utils"
@@ -21,5 +22,8 @@
     "utility"
   ],
   "author": "Zhongyuan Jin",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
   "license": "MIT"
 }
