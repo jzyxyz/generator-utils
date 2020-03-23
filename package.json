@@ -1,0 +1,15 @@
+{
+  "name": "generator-utils",
+  "version": "1.0.0",
+  "description": "utility functions to make everyday with generator easier",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "generator",
+    "utility"
+  ],
+  "author": "Zhongyuan Jin",
+  "license": "MIT"
+}
