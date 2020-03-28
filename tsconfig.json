@@ -3,12 +3,9 @@
     "target": "es2019",
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "sourceMap": true,
     "noImplicitAny": true,
     "removeComments": false,
     "module": "ES6",
-    "outDir": "dist",
-    "declaration": true,
     "strictNullChecks": false,
     "lib": ["es2020", "DOM"]
   },
