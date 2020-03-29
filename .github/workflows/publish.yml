@@ -28,8 +28,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Build cjs
+        run: npm run build:cjs
+
+      - name: Build es
+        run: npm run build:es
 
       - name: Create .npmrc
         run: echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" >> ~/.npmrc

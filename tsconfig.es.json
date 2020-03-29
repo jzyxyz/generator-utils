@@ -9,7 +9,8 @@
     "declaration": true,
     "sourceMap": true,
     "strictNullChecks": false,
-    "lib": ["es2020"]
+    "lib": ["es2020"],
+    "outDir": "dist/es"
   },
   "include": ["src/*"],
   "exclude": ["node_modules"]
