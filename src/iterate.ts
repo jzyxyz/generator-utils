@@ -6,8 +6,8 @@
  */
 async function iterate<T>(
   generator: AsyncGenerator<T>,
-  each: (yielded?: T, index?: number) => Promise<any>,
-  done: (yieldedArray?: T[]) => Promise<any>,
+  each?: (yielded?: T, index?: number) => Promise<any>,
+  done?: (yieldedArray?: T[]) => Promise<any>,
 ) {
   let final = []
   let i = 0
