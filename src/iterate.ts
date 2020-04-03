@@ -14,9 +14,9 @@ async function iterate<T>(
   for await (let yielded of generator) {
     i++
     final.push(yielded)
-    await each(yielded, i)
+    each && (await each(yielded, i))
   }
-  await done(final)
+  done && (await done(final))
 }
 
 export default iterate
