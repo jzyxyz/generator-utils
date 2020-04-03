@@ -4,7 +4,7 @@
  * @param {(yielded?: T, index?:number) => Promise<any>} each this callback is called with the yielded value and index each time a new value is generated
  * @param {(yieldedArray?:T[]) => Promise<any>} done this callback is called with all the values from generator in the end
  */
-async function iterate<T>(
+export const iterate = async function <T>(
   generator: AsyncGenerator<T>,
   each?: (yielded?: T, index?: number) => Promise<any>,
   done?: (yieldedArray?: T[]) => Promise<any>,
@@ -18,5 +18,3 @@ async function iterate<T>(
   }
   done && (await done(final))
 }
-
-export default iterate

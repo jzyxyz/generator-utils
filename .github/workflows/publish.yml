@@ -24,20 +24,19 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '13'
+          registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build cjs
-        run: npm run build:cjs
-
-      - name: Build es
-        run: npm run build:es
+      - name: Build
+        run: npm run build
 
       - name: Create .npmrc
-        run: echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" >> ~/.npmrc
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" >> ~/.npmrc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
-      - name: Publish
-        run: npm publish
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
