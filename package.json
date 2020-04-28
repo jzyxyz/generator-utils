@@ -1,6 +1,6 @@
 {
   "name": "generator-utility",
-  "version": "1.1.8",
+  "version": "2.0.0",
   "description": "utility functions to make everyday with generator easier",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
