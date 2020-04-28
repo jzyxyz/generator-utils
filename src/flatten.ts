@@ -5,7 +5,7 @@
  */
 export const flatten = function <T>(
   array: AsyncGenerator<T>[],
-): AsyncGenerator<T> {
+): AsyncGenerator<T, void> {
   return {
     [Symbol.asyncIterator]: async function* () {
       const [head, ...rest] = array
@@ -14,5 +14,5 @@ export const flatten = function <T>(
         yield* flatten(rest)
       }
     },
-  } as AsyncGenerator<T>
+  } as AsyncGenerator<T, void>
 }

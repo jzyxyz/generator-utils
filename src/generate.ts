@@ -2,7 +2,7 @@
  * Force executing some async function synchronously
  * @template T,R
  * @param  {(el:T,index?:number,arr?:T[])=>Promise<R>} fn
- * @returns {(arr: T[]) => AsyncGenerator<R>}
+ * @returns {(arr: T[]) => AsyncGenerator<R, void>}
  * @example
  * const fetchById = id => Promise.resolve(id)
  * const generator = generate(fetchById))([1,2,3}])

@@ -10,9 +10,8 @@
     "url": "https://github.com/jzyxyz/generator-utils"
   },
   "scripts": {
-    "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build:es": "tsc -p tsconfig.es.json",
-    "test": "jest"
+    "build": "./build.sh",
+    "test": "jest --coverage && jest-coverage-badges"
   },
   "files": [
     "dist/**/*"
@@ -25,8 +24,12 @@
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "jest": "^25.4.0",
+    "jsdoc": "^3.6.4",
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jest-coverage-badges": "^1.1.2"
+  }
 }
